@@ -1,0 +1,11 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: demo-website
+spec:
+  routes:
+  - kind: Rule
+    match: Host(`staging.plutolab.live`)
+    services:
+    - name: demo-website-staging
+      port: 80

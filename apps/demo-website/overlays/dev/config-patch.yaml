@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-website
+spec:
+  template:
+    spec:
+      containers:
+      - name: demo-website
+        env:
+        - name: BACKGROUND_COLOR
+          value: "#f5f5f5"
+        - name: ENVIRONMENT
+          value: "dev"

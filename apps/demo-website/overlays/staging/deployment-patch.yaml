@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-website
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: demo-website
+        resources:
+          limits:
+            cpu: "600m"
+            memory: "512Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+        env:
+        - name: BACKGROUND_COLOR
+          value: "#d4edda"
+        - name: ENVIRONMENT
+          value: "staging"

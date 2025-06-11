@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-website
+spec:
+  replicas: 5
+  template:
+    spec:
+      containers:
+      - name: demo-website
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+          requests:
+            cpu: "800m"
+            memory: "768Mi"
+        env:
+        - name: BACKGROUND_COLOR
+          value: "#fc6f03"
+        - name: ENVIRONMENT
+          value: "prod"
