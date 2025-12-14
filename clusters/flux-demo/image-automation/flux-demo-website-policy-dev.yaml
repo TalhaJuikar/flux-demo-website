@@ -1,0 +1,13 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImagePolicy
+metadata:
+  name: flux-demo-website-dev
+  namespace: flux-system
+  labels:
+    environment: dev
+spec:
+  imageRepositoryRef:
+    name: flux-demo-website
+  policy:
+    semver:
+      range: '>=1.0.0-0'  # All versions including pre-releases
