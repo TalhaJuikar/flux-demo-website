@@ -8,6 +8,9 @@ metadata:
 spec:
   imageRepositoryRef:
     name: flux-demo-website
+  filterTags:
+    pattern: '^[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$'
+    extract: '$0'
   policy:
-    semver:
-      range: '>=1.0.0-0'  # All versions including pre-releases
+    alphabetical:
+      order: asc 
