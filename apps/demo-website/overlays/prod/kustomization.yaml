@@ -9,8 +9,13 @@ patchesStrategicMerge:
   - ingress-patch.yaml
 images:
   - name: ghcr.io/talhajuikar/flux-demo-website
+<<<<<<< HEAD
     newName: ghcr.io/talhajuikar/flux-demo-website
     newTag: ghcr.io/talhajuikar/flux-demo-website:1.0.0@sha256:9b420bf6fc8c584dc8929a9f9ec4521e5c8d7a1d338c6795d6b815d86f0ee123 # {"$imagepolicy": "flux-system:flux-demo-website-prod"}
+=======
+    newTag: 1.0.0 # {"$imagepolicy": "flux-system:flux-demo-website-prod"}
+
+>>>>>>> 0775798 (Remove redundant newName field from image definitions in kustomization files)
 commonLabels:
   environment: prod
 nameSuffix: -prod
