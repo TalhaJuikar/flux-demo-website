@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageRepository
+metadata:
+  name: flux-demo-website
+  namespace: flux-system
+spec:
+  image: ghcr.io/talhajuikar/flux-demo-website
+  interval: 5m

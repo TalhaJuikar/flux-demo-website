@@ -1,0 +1,16 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImagePolicy
+metadata:
+  name: flux-demo-website
+  namespace: flux-system
+  labels:
+    environment: dev
+spec:
+  imageRepositoryRef:
+    name: flux-demo-website-dev
+  filterTags:
+    pattern: '^[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$'
+    extract: '$0'
+  policy:
+    alphabetical:
+      order: asc 

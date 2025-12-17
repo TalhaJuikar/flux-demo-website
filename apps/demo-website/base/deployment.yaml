@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-website
+  labels:
+    app: demo-website
+spec:
+  selector:
+    matchLabels:
+      app: demo-website
+  template:
+    metadata:
+      labels:
+        app: demo-website
+    spec:
+      containers:
+      - name: demo-website
+        image: ghcr.io/talhajuikar/flux-demo-website:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
