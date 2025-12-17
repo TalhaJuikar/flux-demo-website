@@ -10,7 +10,9 @@ patchesStrategicMerge:
   - ingress-patch.yaml
 images:
   - name: ghcr.io/talhajuikar/flux-demo-website
-    newTag: ghcr.io/talhajuikar/flux-demo-website:1.0.0-beta.3 # {"$imagepolicy": "flux-system:flux-demo-website-dev"}
+    newTag: 1.0.0-beta.3 # {"$imagepolicy": "flux-system:flux-demo-website-dev:tag"}
+
+
 commonLabels:
   environment: dev
 nameSuffix: -dev
