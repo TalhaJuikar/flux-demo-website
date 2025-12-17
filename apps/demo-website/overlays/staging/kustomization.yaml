@@ -8,7 +8,7 @@ patchesStrategicMerge:
   - ingress-patch.yaml
 images:
   - name: ghcr.io/talhajuikar/flux-demo-website
-    newTag: 1.0.0-rc.1 # {"$imagepolicy": "flux-system:flux-demo-website-staging:tag"}
+    newTag: 1.0.1-rc.3 # {"$imagepolicy": "flux-system:flux-demo-website-staging:tag"}
 
 commonLabels:
   environment: staging
